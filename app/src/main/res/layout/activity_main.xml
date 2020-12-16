@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_top"
+    android:orientation="vertical"
+
+    android:background="#000"
+    tools:context=".MainActivity">
+
+
+<!--    <com.moxun.tagcloudlib.view.TagCloudView-->
+<!--        android:id="@+id/tag_test"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/timg"
+        android:layout_centerInParent="true"
+        />
+
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id="@+id/tag_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:autoScrollMode="uniform"
+        app:darkColor="@color/tagDark"
+        app:lightColor="@color/tagLight"
+        app:radiusPercent="1"
+        app:scrollSpeed="1" />
+
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id="@+id/tag_cloudq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoScrollMode="uniform"
+        app:darkColor="@color/tagDark"
+        android:layout_centerInParent="true"
+        app:lightColor="@color/tagLight"
+        app:radiusPercent="1"
+        android:visibility="gone"
+        app:scrollSpeed="3" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/et_content"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:hint="请输入"
+                android:inputType="number"
+                android:padding="10dp"
+                android:maxLength="3"
+                ></EditText>
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认"
+                android:padding="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>
